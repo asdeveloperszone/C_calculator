@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add these inside your <head> section, after <meta charset="UTF-8"> -->
+<meta name="description" content="C programming calculator source code with leap year function from AS-DEVELOPER ZONE">
+<meta name="keywords" content="C programming, calculator code, source code">
+<!-- Basic SEO Meta Tags -->
+<title>C Programming Calculator Code - AS-DEVELOPER ZONE</title>
+<meta name="description" content="Complete C programming code for calculator with leap year checker. Copy-ready source code for beginners.">
+<meta name="keywords" content="C programming, calculator code, leap year, C source code, programming examples">
+<meta name="author" content="AS-DEVELOPER ZONE">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a237e">
+
+<!-- Open Graph for social sharing -->
+<meta property="og:title" content="C Programming Calculator Code">
+<meta property="og:description" content="Complete C code for calculator with leap year detection">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourusername.github.io"> <!-- Replace with your GitHub Pages URL -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C Programming Calculator Code">
+<meta name="twitter:description" content="Free C programming source code for calculator functions">
+
+<!-- Structured Data for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "C Calculator Program",
+  "description": "Complete C programming code implementing calculator with leap year checker",
+  "programmingLanguage": "C",
+  "codeRepository": "https://github.com/yourusername/your-repo", <!-- Replace with your repo -->
+  "author": {
+    "@type": "Person",
+    "name": "AS Developer"
+  },
+  "datePublished": "2025-12-03"
+}
+</script>
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://yourusername.github.io">
+
+<!-- Favicon for GitHub Pages -->
+<link rel="shortcut icon" href="c.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style type="text/css" media="all">
+  *{
+  	
+  	padding: 0px;
+  	margin: 0px;
+  }
+  body{
+  	background-color : black;
+  }
+  header{
+  	background-color: blue;
+  	padding: 10px;
+  }
+  
+  	h1{
+  		text-align: center;
+  		color: yellow;
+  	}
+  	p{
+  		font-size : 14px;
+  		text-align: center;
+  		color: yellow;
+  		font-weight : bold;
+  	}
+  	code {
+  	
+  		color: lawngreen;
+  	}
+  	pre {
+  		margin-left :  30px;
+  		text-align : left;
+  		overflow-x: auto;
+  	}
+button {
+	background-color: green;
+	color:white;
+	padding : 5px;
+	border-radius: 9px;
+	font-weight : bold;
+	/*margin-right: left;*/
+}
+.as{
+	padding: 9px;
+	text-align : right;
+	margin-right : 30px;
+}
+footer {
+	background: blue;
+	padding : 40px;
+	width: auto;
+}
+ footer p.f{
+ 		font-size : 12px;
+  		 text-align: center; 
+  		color: yellow;
+  		/*font-weight : bold;*/
+ }
+  	/*.ccode .as{
+  		background-color: blanchedalmond;
+  		color: darkseagreen;
+  	}*/
+  </style>
+</head>
+
+<body>
+	<header>
+			<h1>
+		AS-DEVELOPER ZONE
+	</h1>
+	<p>C LANGUAGE CODE for Calculator</p>
+	</header>
+<main>
+	<div class="ccode">
+	<div class="as">
+		<button onclick="ascode(this)"><i class="fas fa-copy"></i> AS COPY</button>
+<pre>
+  <code>
+#include &lt;stdio.h&gt;
+void Welcome();
+void leapyear();
+void calculator();
+/*
+void mtok();
+void love();
+void footer();*/
+int main()
+{
+	Welcome();
+   
+	leapyear();printf("\n");
+   calculator();
+	return 0;
+}
+
+void Welcome()
+{
+	printf("Welcome to AS-DEVELOPER ZONE:");
+	//char name[99];
+	/*	printf("\nEnter year name:");
+	scanf(" %s",&name);
+	
+	printf(" Most Welcome: My Dear %s.",name);
+*/
+}
+void leapyear()
+{
+	int userInputYear;
+	printf("Enter year:");
+	scanf("%d", &userInputYear);
+	if (userInputYear % 4 == 0)
+	{
+		printf("%d is a leap Year.", userInputYear);
+	}
+	else
+	{
+		printf("%d is not a leap Year.", userInputYear);
+	}
+}
+void calculator()
+{
+	float stNumber, ndNumber;
+	char userChoice;
+	printf("Enter 1st Number:\t");
+	scanf("%f", &stNumber);
+	printf("Enter 2nd Number:\t");
+	scanf("%f", &ndNumber);
+	printf("Enter choice:(+,-,*,/)");
+	scanf(" %c", &userChoice);
+	switch (userChoice)
+	{	
+case '+':
+	printf("%.2f + %.2f = %.2f", stNumber, ndNumber, stNumber + ndNumber);
+case '-':
+	printf("%.2f - %.2f = %.2f", stNumber, ndNumber, stNumber - ndNumber);
+break ;
+case '*':
+
+	printf("%.2f * %.2f = %.2f", stNumber, ndNumber, stNumber * ndNumber);
+break ;
+case '/':
+	if (stNumber != 0 && ndNumber != 0)
+	{
+		printf("%.2f ÷ %.2f = %.2f", stNumber, ndNumber, stNumber / ndNumber);
+		break;
+	}
+	else
+	{
+		printf("Division by 0 is Invalid.");
+	}}
+}
+  </code>
+</pre>  </div></div>
+	
+</main>
+<footer>
+	<p class="f">&copy;2025.AS-DEVELOPER ZONE All Rights Reserved.</p>
+</footer>
+<script type="text/javascript" charset="utf-8">
+	function ascode(button) {
+		const asb = button.closest('.as').querySelector('code');
+		navigator.clipboard.writeText(asb.textContent);
+		button.innerHTML = '<i class="fas fa-check"></i> AS COPIED';
+			setTimeout(function() {
+		button.innerHTML = '<i class="fas fa-copy"></i> AS COPY';
+	}, 3000);
+	}
+
+	
+</script>
+</body>
+
+  </html>
